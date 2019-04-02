@@ -1,8 +1,25 @@
-var express = require('express')
-var app = express()
+const express = require('express')
+const app = express()
+
+let myLogger = function (req, res, next) {
+  console.log('=====req====')
+  next()
+}
+
+let timer = function (req, res, next) {
+  req.requestTime = Date.now()
+  next()
+}
+
+app.use(myLogger)
+app.use(timer)
 
 app.get('/', function (req, res) {
-  res.send('Hello World!')
+  let json = {
+    text: 'Hello World!',
+    time: req.requestTime
+  }
+  res.send(json)
 })
 
 app.listen(3000, function () {
