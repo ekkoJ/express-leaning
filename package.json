@@ -1,0 +1,23 @@
+{
+  "name": "express-leaning",
+  "version": "1.0.0",
+  "description": " express practive and learn",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ekkoJ/express-leaning.git"
+  },
+  "author": "ekko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ekkoJ/express-leaning/issues"
+  },
+  "homepage": "https://github.com/ekkoJ/express-leaning#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
